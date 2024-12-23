@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="chat">
+        <h2 id="h2">Azərbaycan çat otağı</h2>
+        <div id="settings">
+            <button id="changeName">Adını Değiştir</button>
+            <button id="changeNameColor">İsim Rengi</button>
+        </div>
+        <div id="nameInput" class="input-group">
+            <input type="text" id="newName" placeholder="Yeni adınızı yazın..." />
+            <button id="confirmName">Tamam</button>
+        </div>
+        <div id="nameColorPicker" class="input-group">
+            <input type="color" id="newNameColor" />
+            <button id="confirmNameColor">Tamam</button>
+        </div>
+        <div id="messages"></div>
+        <div id="inputContainer" class="input-group">
+            <input id="messageInput" type="text" placeholder="Mesajınızı yazın..." />
+            <button id="emojiBtn">😊</button>
+            <button id="sendBtn">Gönder</button>
+        </div>
+        <div id="emojiPanel">
+            <button class="emoji-btn">👍</button>
+            <button class="emoji-btn">👎</button>
+            <button class="emoji-btn">😀</button>
+            <button class="emoji-btn">😂</button>
+            <button class="emoji-btn">😍</button>
+            <button class="emoji-btn">😎</button>
+            <button class="emoji-btn">😢</button>
+            <button class="emoji-btn">🥳</button>
+            <button class="emoji-btn">😡</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

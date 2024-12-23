@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden; /* Ana ekrandan kaydırma çubuklarını kaldır */
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Tam ekran yüksekliği */
+    margin: 0;
+    padding: 20px;
+    background-color: #000000; /* Beyaz arka plan rengi */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Taşan içeriği gizle */
+}
+
+#chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#chatHeader h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+#toggleFullscreen {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+#toggleFullscreen:hover {
+    color: #007bff;
+}
+
+#settings {
+    display: flex;
+    justify-content: flex-start; /* Sol tarafa hizala */
+    gap: 10px; /* Butonlar arasında az mesafe bırak */
+    margin-bottom: 20px;
+}
+
+#settings button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#settings button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.input-group {
+    display: flex;
+    justify-content: flex-start; /* Sol tarafa hizala */
+    margin-bottom: 20px;
+    gap: 10px; /* Butonlar arasında az mesafe bırak */
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="color"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    margin-left: 10px; /* Sol tarafa yakınlaştır */
+    margin-right: 10px; /* Sağ tarafa taşmasını engelle */
+}
+
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+#messages::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+#chat h2{
+    text-align: center;
+    border-top: 1px solid #000000;
+    padding-top: 10px;
+    transition: transform 0.3s;
+    user-select: none; /* Yazının seçilmesini engelle */
+}
+
+#chat h2:hover {
+    transform: translateY(-2px);
+}
+
+.message {
+    padding: 10px;
+    border-bottom: 1px solid #141414;
+    margin-left: 5px; /* Sol tarafa yakınlaştır */
+    margin-right: 10px; /* Sağ tarafa taşmasını engelle */
+}
+
+#inputContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #000000;
+    border-top: 1px solid #000000;
+}
+
+#inputContainer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+#inputContainer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #161616;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#inputContainer button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#emojiBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+#emojiBtn:hover {
+    transform: scale(1.2);
+}
+
+#emojiPanel {
+    display: none;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    right: 10px;
+    background-color: #000000; /* Arka plan rengini siyah yap */
+    border: none; /* Kenarlığı kaldır */
+    border-radius: 5px;
+    box-shadow: none; /* Gölgeyi kaldır */
+    padding: 10px;
+    z-index: 1000;
+    transition: max-height 0.3s ease-in-out;
+}
+
+#emojiPanel.open {
+    display: flex;
+    max-height: 200px;
+    background-color: #000000; /* Arka plan rengini siyah yap */
+}
+
+.emoji-btn {
+    font-size: 24px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-color: transparent; /* Arka plan rengini kaldır */
+}
+
+.emoji-btn:hover {
+    transform: scale(1.2);
+}
